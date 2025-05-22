@@ -1,7 +1,7 @@
 :root {
-  --paper: #ffffff; /* Changed from oklch to hex */
-  --ink: #333333; /* Changed from oklch to hex */
-  --color: #5e72e4; /* Changed from oklch to hex */
+  --paper: oklch(99% 0 0);
+  --ink: oklch(20% 0 0);
+  --color: oklch(60% 0.2 260);
   --font: 100%/1.5 system-ui;
   --space: clamp(6px, 6px + 2vw, 15px);
   --line: 1px solid var(--ink);
@@ -10,7 +10,7 @@
 
 /* ====== Base Elements ====== */
 body {
-  background-color: var(--paper); /* Changed property to background-color */
+  background: var(--paper);
   color: var(--ink);
   font: var(--font);
   margin: 0;
@@ -22,6 +22,7 @@ body {
 header {
   text-align: center;
   padding: calc(var(--space) * 4) var(--space);
+  /* Removed the border-bottom property */
 }
 
 h1, h2, h3 {
@@ -50,7 +51,7 @@ a {
 }
 
 a:hover {
-  background-color: var(--ink); /* Changed property to background-color */
+  background: var(--ink);
   color: var(--paper);
 }
 
@@ -84,7 +85,7 @@ footer {
   text-align: center;
   padding: var(--space);
   border-top: var(--line);
-  background-color: var(--paper); /* Changed property to background-color */
+  background: var(--paper);
   z-index: 100;
 }
 
